@@ -1,143 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>JAPL is coming soon!</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-</head>
-<body>
-	
-	
-	<div class="size1 bg0 where1-parent">
-		<!-- Coutdown -->
-		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('images/bg01.jpg');">
-			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
-				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-					<span class="l2-txt1 p-b-9 days">35</span>
-					<span class="s2-txt4">Days</span>
-				</div>
-
-				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-					<span class="l2-txt1 p-b-9 hours">17</span>
-					<span class="s2-txt4">Hours</span>
-				</div>
-
-				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-					<span class="l2-txt1 p-b-9 minutes">50</span>
-					<span class="s2-txt4">Minutes</span>
-				</div>
-
-				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-					<span class="l2-txt1 p-b-9 seconds">39</span>
-					<span class="s2-txt4">Seconds</span>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Form -->
-		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
-			<div class="wrap-pic1">
-				<img src="images/icons/logo.png" alt="LOGO">
-			</div>
-
-			<div class="p-t-50 p-b-60">
-				<p class="m1-txt1 p-b-36">
-					Our website is <span class="m1-txt2">Coming Soon</span>, follow us for update now!
-				</p>
-
-				<form class="contact100-form validate-form">
-					<div class="wrap-input100 m-b-10 validate-input" data-validate = "Name is required">
-						<input class="s2-txt1 placeholder0 input100" type="text" name="name" placeholder="Your Name">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 m-b-20 validate-input" data-validate = "Email is required: ex@abc.xyz">
-						<input class="s2-txt1 placeholder0 input100" type="text" name="email" placeholder="Email Address">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="w-full">
-						<button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
-							Subscribe
-						</button>
-					</div>
-				</form>
-
-				<p class="s2-txt3 p-t-18">
-					And don’t worry, we hate spam too! You can unsubcribe at anytime.
-				</p>
-			</div>
-
-			<div class="flex-w">
-				<a href="#" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
-					<i class="fa fa-facebook"></i>
-				</a>
-
-				<a href="#" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
-					<i class="fa fa-twitter"></i>
-				</a>
-
-				<a href="#" class="flex-c-m size5 bg5 how1 trans-04 m-r-5">
-					<i class="fa fa-youtube-play"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-
-	
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script>
-		$('.cd100').countdown100({
-			/*Set Endtime here*/
-			/*Endtime must be > current time*/
-			endtimeYear: 0,
-			endtimeMonth: 0,
-			endtimeDate: 35,
-			endtimeHours: 18,
-			endtimeMinutes: 0,
-			endtimeSeconds: 0,
-			timeZone: "" 
-			// ex:  timeZone: "America/New_York"
-			//go to " http://momentjs.com/timezone/ " to get timezone
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>JAPL - Just Another Programming Language</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="japl---just-another-programming-language"><a class="header-link" href="#japl---just-another-programming-language"></a>JAPL - Just Another Programming Language</h1>
+<p>JAPL is an interpreted, dynamically-typed, garbage-collected, and minimalistic programming language with C- and Java-like syntax.</p>
+<h1 id="j..-what?"><a class="header-link" href="#j..-what?"></a>J.. what?</h1>
+<p>You may wonder what&#39;s the meaning of JAPL: well, it turns out to be an acronym
+for <strong>Just Another Programming Language</strong>, but beware! Despite the name, the pronunciation is the same as &quot;JPL&quot;.</p>
+<h2 id="disclaimer"><a class="header-link" href="#disclaimer"></a>Disclaimer</h2>
+<p>This project is currently a WIP (Work in Progress) and is not optimized nor complete.
+The design of the language may change at any moment and all the source inside this repo
+is alpha code quality, for now. </p>
+<p>For other useful information, check the LICENSE file in this repo.</p>
+<p>JAPL is licensed under the Apache 2.0 license.</p>
+<h2 id="project-roadmap"><a class="header-link" href="#project-roadmap"></a>Project roadmap</h2>
+<p>In no particular order, here&#39;s a list that is constantly updated and that helps us to keep track
+of what&#39;s done in JAPL:</p>
+<ul class="list">
+<li>Parsing/Lexing ✅</li>
+<li>Type system  ✅</li>
+<li>Control flow (if/else)  ✅</li>
+<li>Loops (for/while)  ✅</li>
+<li>Basic comparisons operators (<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code>, <code>==</code>) ✅</li>
+<li>Logical operators (<code>!</code>, <code>or</code>, <code>and</code>)  ✅</li>
+<li>Multi-line comments <code>/* like this */</code> (can be nested)  ✅</li>
+<li>Differentiation between integers and floating point numbers  ✅</li>
+<li><code>inf</code> and <code>nan</code> types  ✅</li>
+<li>Basic arithmetic (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>)  ✅</li>
+<li>Modulo division (<code>%</code>) and exponentiation (<code>**</code>)  ✅</li>
+<li>Bitwise operators (AND, OR, XOR, NOT)  ✅</li>
+<li>Global and local variables  (<strong>WIP</strong>)</li>
+<li>Explicit scopes using brackets (<strong>WIP</strong>)</li>
+<li>Garbage collector</li>
+<li>String slicing, with start:end syntax as well  ✅</li>
+<li>Operations on strings (addition, multiplication)  ✅</li>
+<li>Functions and Closures (<strong>WIP</strong>)</li>
+<li>Functions default and keyword arguments (<strong>WIP</strong>)</li>
+<li>An OOP system (prototype- or class-based)  (<strong>Coming soon</strong>)</li>
+<li>A proper import system (<strong>Coming soon</strong>)</li>
+<li>Native asynchronous (<code>await</code>/<code>async fun</code>) support (<strong>Coming soon</strong>)</li>
+<li>Bytecode optimizations such as constant folding and stack caching (<strong>Coming Soon</strong>)</li>
+<li>Arbitrary-precision arithmetic (<strong>Coming soon</strong>)</li>
+<li>Generators (<strong>Coming soon</strong>)</li>
+<li>A standard library with collections, I/O utilities, scientific modules, etc (<strong>Coming soon</strong>)</li>
+<li>Multithreading and multiprocessing support with a global VM Lock like CPython (<strong>Coming soon</strong>)</li>
+<li>Exceptions (<strong>Coming soon</strong>)</li>
+<li>Optional JIT Compilation (<strong>Coming soon</strong>)</li>
+</ul>
+<h3 id="classifiers"><a class="header-link" href="#classifiers"></a>Classifiers</h3>
+<ul class="list">
+<li><strong>WIP</strong>: Work In Progress, being implemented right now</li>
+<li><strong>Coming Soon</strong>: Not yet implemented/designed but scheduled</li>
+<li><strong>Rework Needed</strong>: The feature works, but can (and must) be optimized/reimplemented properly</li>
+<li>✅: The feature works as intended</li>
+</ul>
+<h2 id="contributing"><a class="header-link" href="#contributing"></a>Contributing</h2>
+<p>If you want to contribute, feel free to open a PR!</p>
+<p>Right now there are some major issues with the virtual machine which need to be addressed
+before the development can proceed, and some help is <del>desperately needed</del> greatly appreciated!</p>
+<p>To get started, you might want to have a look at the currently open issues and start from there</p>
+<h2 id="community"><a class="header-link" href="#community"></a>Community</h2>
+<p>Our first goal is to create a welcoming and helpful community, so if you are so inclined,
+you might want to join our <a href="https://discord.gg/P8FYZvM">Discord server</a> and our <a href="https://forum.japl-lang.com">forum</a>! We can&#39;t wait to welcome you into
+our community :D</p>
+<h2 id="a-special-thanks"><a class="header-link" href="#a-special-thanks"></a>A special thanks</h2>
+<p>JAPL is born thanks to the amazing work of Bob Nystrom that wrote a book available completely for free
+at <a href="https://craftinginterpreters.com">this</a> link, where he describes the implementation of a simple language called Lox.</p>
+    </article>
+  </body>
 </html>
