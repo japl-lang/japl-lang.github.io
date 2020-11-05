@@ -1,15 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAPL - Just Another Programming Language</title>
-    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
   </head>
-  <body>
-    <article class="markdown-body"><h1 id="japl---just-another-programming-language"><a class="header-link" href="#japl---just-another-programming-language"></a>JAPL - Just Another Programming Language</h1>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Explore</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="https://forum.japl-lang.com">Forum</a></li>
+          <li><a href="https://discord.gg/P8FYZvM">Discord</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Read More<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/japl-lang">GitHub Organization</a></li>
+              <li><a href="mailto:hackhab@gmail.com">Author Email</a></li>
+              <li><a href="https://t.me/nocturn9x">Author on Telegram</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"><h1 id="japl---just-another-programming-language"><a class="header-link" href="#japl---just-another-programming-language"></a>JAPL - Just Another Programming Language</h1>
 <p>JAPL is an interpreted, dynamically-typed, garbage-collected, and minimalistic programming language with C- and Java-like syntax.</p>
 <h1 id="j..-what?"><a class="header-link" href="#j..-what?"></a>J.. what?</h1>
 <p>You may wonder what&#39;s the meaning of JAPL: well, it turns out to be an acronym
@@ -25,20 +55,19 @@ is alpha code quality, for now. </p>
 of what&#39;s done in JAPL:</p>
 <ul class="list">
 <li>Parsing/Lexing ✅</li>
-<li>Type system  ✅</li>
+<li>Object oriented type system  ✅</li>
 <li>Control flow (if/else)  ✅</li>
 <li>Loops (for/while)  ✅</li>
 <li>Basic comparisons operators (<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code>, <code>==</code>) ✅</li>
-<li>Logical operators (<code>!</code>, <code>or</code>, <code>and</code>)  ✅</li>
+<li>Logical operators (<code>!</code>, <code>or</code>, <code>and</code>)  (<strong>Rework Needed</strong>)</li>
 <li>Multi-line comments <code>/* like this */</code> (can be nested)  ✅</li>
-<li>Differentiation between integers and floating point numbers  ✅</li>
 <li><code>inf</code> and <code>nan</code> types  ✅</li>
 <li>Basic arithmetic (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>)  ✅</li>
 <li>Modulo division (<code>%</code>) and exponentiation (<code>**</code>)  ✅</li>
 <li>Bitwise operators (AND, OR, XOR, NOT)  ✅</li>
 <li>Global and local variables  (<strong>WIP</strong>)</li>
 <li>Explicit scopes using brackets (<strong>WIP</strong>)</li>
-<li>Garbage collector</li>
+<li>Garbage collector  (<strong>Coming soon</strong>)</li>
 <li>String slicing, with start:end syntax as well  ✅</li>
 <li>Operations on strings (addition, multiplication)  ✅</li>
 <li>Functions and Closures (<strong>WIP</strong>)</li>
@@ -73,6 +102,30 @@ our community :D</p>
 <h2 id="a-special-thanks"><a class="header-link" href="#a-special-thanks"></a>A special thanks</h2>
 <p>JAPL is born thanks to the amazing work of Bob Nystrom that wrote a book available completely for free
 at <a href="https://craftinginterpreters.com">this</a> link, where he describes the implementation of a simple language called Lox.</p>
-    </article>
-  </body>
+<h1 id="japl---installing"><a class="header-link" href="#japl---installing"></a>JAPL - Installing</h1>
+<p>JAPL is currently in its early stages and is therefore in a state of high mutability, so this installation guide might
+not be always up to date.</p>
+<h2 id="requirements"><a class="header-link" href="#requirements"></a>Requirements</h2>
+<p>To compile JAPL, you need the following:</p>
+<ul class="list">
+<li>Nim &gt;= 1.2 installed on your system</li>
+<li>Git (to clone the repository)</li>
+<li>Python &gt;= 3.6 (Build script)</li>
+</ul>
+<h2 id="cloning-the-repo"><a class="header-link" href="#cloning-the-repo"></a>Cloning the repo</h2>
+<p>Once you&#39;ve installed all the required tooling, you can clone the repo with the following command</p>
+<pre class="hljs"><code>git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/japl-lang/japl</code></pre><h2 id="running-the-build-script"><a class="header-link" href="#running-the-build-script"></a>Running the build script</h2>
+<p>As a next step, you need to run the build script. This will generate the required configuration files,
+compile the JAPL runtime and run tests (when we&#39;ll actually have some tests). There are some options that
+can be tweaked with command-line options, for more information, run <code>python3 build.py --help</code>.</p>
+<p>To compile the JAPL runtime, you&#39;ll first need to move into the project&#39;s directory you cloned before,
+so run <code>cd japl</code>, then <code>python build.py ./src --flags gc:markAndSweep,d:release</code> and wait for it
+to complete. You should now find an executable named <code>japl</code> (or <code>japl.exe</code> on windows) inside the <code>src</code> folder.</p>
+<p>If you&#39;re running under windows, you might encounter some issues when using forward-slashes as opposed to back-slashes in paths,
+so you should replace <code>./src</code> with <code>.\src</code></p>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
 </html>
