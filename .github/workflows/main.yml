@@ -13,7 +13,7 @@ jobs:
   deploy-website:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: japl-lang/japl-lang.github.io@v2
     - name: Configure git credentials
       uses: OleksiyRudenko/gha-git-credentials@v2
       with:
