@@ -1,0 +1,35 @@
+# Automatically updates japl's website repo with changes from the README
+
+name: Website
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v2
+        with:
+          email: github-action@users.noreply.github.com
+          name: GitHub Action
+          actor: github.actor
+          token: secrets.GITHUB_TOKEN
+      - name: Deploy website
+        run: | 
+          python3 -m pip install gh-md-to-html --user
+          git clone https://github.com/japl-lang/japl --depth 1
+          cd japl
+          git checkout master
+          cp README.md ..
+          cd ..
+          rm -rf japl
+          gh-md-to-html README.html -c css -n index.html
+          git add . 
+          git commit -m "Automated: Updated website"
+          git push
