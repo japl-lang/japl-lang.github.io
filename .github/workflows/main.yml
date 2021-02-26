@@ -13,17 +13,18 @@ jobs:
   deploy-website:
     runs-on: ubuntu-latest
     steps:
-      - name: Configure git credentials
-        uses: OleksiyRudenko/gha-git-credentials@v2
-        with:
-          email: github-action@users.noreply.github.com
-          name: GitHub Action
-          actor: github.actor
-          token: secrets.PUSH_TOKEN
-      - name: Deploy website
-        run: | 
-          python3 -m pip install gh-md-to-html --user
-          gh-md-to-html README.html -c css -n index.html
-          git add . 
-          git commit -m "Automated: Updated website"
-          git push
+    - uses: actions/checkout@v2
+    - name: Configure git credentials
+      uses: OleksiyRudenko/gha-git-credentials@v2
+      with:
+        email: github-action@users.noreply.github.com
+        name: GitHub Action
+        actor: github.actor
+        token: secrets.PUSH_TOKEN
+    - name: Deploy website
+      run: | 
+        python3 -m pip install gh-md-to-html --user
+        gh-md-to-html README.html -c css -n index.html
+        git add . 
+        git commit -m "Automated: Updated website"
+        git push
