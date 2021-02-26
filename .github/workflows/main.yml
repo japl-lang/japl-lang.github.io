@@ -23,12 +23,6 @@ jobs:
       - name: Deploy website
         run: | 
           python3 -m pip install gh-md-to-html --user
-          git clone https://github.com/japl-lang/japl --depth 1
-          cd japl
-          git checkout master
-          cp README.md ..
-          cd ..
-          rm -rf japl
           gh-md-to-html README.html -c css -n index.html
           git add . 
           git commit -m "Automated: Updated website"
