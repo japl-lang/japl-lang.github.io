@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: japl-lang/japl-lang.github.io@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2.2.1
+      with:
+        # We test using a reasonably modern Python version
+        python-version: 3.8.0
+        architecture: x64
     - name: Configure git credentials
       uses: OleksiyRudenko/gha-git-credentials@v2
       with:
